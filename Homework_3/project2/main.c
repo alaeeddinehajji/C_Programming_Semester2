@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+/* //homework_3
+* (Sides of a Right Triangle) Write a program that reads three nonzero integers 
+* and determines and prints if they could be the sides of a right triangle.
+*/
 
 int main()
 {
