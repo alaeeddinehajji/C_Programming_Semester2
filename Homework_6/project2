@@ -1,0 +1,44 @@
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(){
+    int product = 0, quantity;
+    float total = 0;
+    printf("Enter pairs or item numbers and quantities. (ex: 2 1)\nEnter -1 for the item number to end input.\n");
+    while(product != -1){
+        scanf("%d %d", &product, &quantity);
+        int flag;
+        if(product == -1)
+            flag = 0;
+        else
+            flag = 1;
+
+        if(flag == 1){
+                float temp;
+            switch(product){
+                case 1:
+                temp = 2.98 * (float) quantity;
+                break;
+                case 2:
+                temp = 4.50 * (float) quantity;
+                break;
+                case 3:
+                temp = 9.98 * (float) quantity;
+                break;
+                case 4:
+                temp = 4.49 * (float)quantity;
+                break;
+                case 5:
+                temp = 6.87 * (float) quantity;
+                break;
+            default:
+                printf("Invalid Product code: %d\n\tQuantity: %quantity", product, quantity);
+            }
+            total += temp;
+        }
+
+    }
+    printf("The total retail value was: %0.2f", total);
+    return 0;
+}
