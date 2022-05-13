@@ -3,7 +3,6 @@
 #include <time.h>
 
 int flipCoin();
-int randomN();
 
 int main()
 {
