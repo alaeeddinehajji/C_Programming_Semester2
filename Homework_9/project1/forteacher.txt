@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+#define SIZE 10
+
+void bubblesort(double a[] , int size);
+
+int main()
+{
+    srand(time(NULL));
+    double array[SIZE];
+    for(int i = 0; i<SIZE; i++){
+        array[i] = rand() % 10;
+    }
+     printf("\nOriginal Array:");
+  for(int i = 0; i<SIZE; i++){
+    printf("\narray[%d] = %.2lf", i, array[i]);
+  }
+    bubblesort(array,SIZE);
+    return 0;
+}
+
+void bubblesort(double a[], int size){
+    int temp;
+  for(int i = 0; i<size; i++) {
+     for(int j = 0; j<size - 1 ; j++){
+        if(a[j] > a[j+1]){
+                temp = a[j+1];
+                a[j+1] = a[j] ;
+                a[j] = temp;
+        }
+     }
+  }
+  printf("\n\nthe array sorted by bubblesort() :");
+  for(int i = 0; i<size; i++){
+    printf("\na[%d] = %.2lf", i, a[i]);
+  }
+
+}
+
+
+
+
+
+
+
